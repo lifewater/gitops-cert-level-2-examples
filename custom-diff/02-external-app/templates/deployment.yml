@@ -20,3 +20,10 @@ spec:
         image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
         ports:
         - containerPort: 8080
+    ignoreDifferences:
+    - group: ""
+      kind: Secret
+      name: example-secret
+      namespace: example02
+      jsonPointers:
+      - /data
